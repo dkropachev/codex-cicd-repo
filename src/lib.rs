@@ -1,5 +1,5 @@
 pub fn normalize_name(input: &str) -> String {
-    input.trim().to_lowercase()
+    input . trim().to_lowercase()
 }
 
 #[cfg(test)]
