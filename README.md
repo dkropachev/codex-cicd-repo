@@ -36,3 +36,5 @@ MOCK_AI_SCENARIO=fix-rust-lint python3 tools/mock_ai_server.py
 
 The server listens on `127.0.0.1:18080` and writes requests to
 `.mock-ai/requests.jsonl`.
+
+# Mock AI context fallback scenario.
