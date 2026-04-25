@@ -1,0 +1,22 @@
+model = "mock-ci"
+model_provider = "mock-openai"
+
+[model_providers.mock-openai]
+name = "Mock OpenAI"
+base_url = "http://127.0.0.1:18080/v1"
+env_key = "MOCK_OPENAI_API_KEY"
+wire_api = "responses"
+
+[features]
+repo_ci = true
+
+[repo_ci.defaults]
+enabled = true
+automation = "local-and-remote"
+local_test_time_budget_sec = 300
+max_local_fix_rounds = 3
+max_remote_fix_rounds = 2
+models = [
+  { model = "gpt-5.3-codex-spark", reasoning_effort = "high" },
+  { inherit = true },
+]

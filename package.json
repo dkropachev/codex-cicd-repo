@@ -1,0 +1,10 @@
+{
+  "name": "codex-cicd-repo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "node tools/node_lint.js",
+    "build": "node tools/node_build.js",
+    "test": "node node_tests/text.test.js"
+  }
+}
